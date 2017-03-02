@@ -1,0 +1,928 @@
+doctype html
+html(lang='ru')
+	head
+		title categories
+
+		include ./partials/head.jade
+
+	body
+		include ./partials/noscript.jade
+		include ./partials/top-line.jade
+		
+
+
+
+		
+		section.breadcrumbs
+			.container
+				ul.inline-layout
+					li
+						a(href="#") Главная
+					li
+						span /
+					li
+						a(href="#") Мужская обувь
+				p.cat-name Мужская обувь
+
+			
+		section.cat-bunner
+			.container
+				.image-holder
+					img.fake-img(src='img/content/tov7.png', alt='img/content/bunner2.png')
+					.img(style='background-image: url("img/content/bunner2.png")')
+
+		section.categories
+			.container
+				.cat-holder
+					.aside-panel
+						a(href="#").close-btn
+							i.fa.fa-times(aria-hidden="true")
+						.filters
+							h5 фильтровать по:
+							.price-filter
+								h5 цене
+								.range-holder
+									#slider-range
+									.amount-holder
+										span от
+										input#amount1(type='text', readonly='')
+										span до
+										input#amount2(type='text', readonly='')
+										span грн
+							.brand-filter
+								h5 бренду
+								.boxes
+									ul.inline-layout.col-2
+										li
+											.checkbox
+												input#checkbox1(type='checkbox')
+												label(for='checkbox1') HALLY
+										li
+											.checkbox
+												input#checkbox2(type='checkbox')
+												label(for='checkbox2') KEDS
+										li
+											.checkbox
+												input#checkbox3(type='checkbox')
+												label(for='checkbox3') HANSEN
+										li
+											.checkbox
+												input#checkbox4(type='checkbox')
+												label(for='checkbox4') KMM
+										li
+											.checkbox
+												input#checkbox5(type='checkbox')
+												label(for='checkbox5') SAUCONY
+										li
+											.checkbox
+												input#checkbox6(type='checkbox')
+												label(for='checkbox6') NEW ROCK
+										li
+											.checkbox
+												input#checkbox7(type='checkbox')
+												label(for='checkbox7') PAEZ
+										li
+											.checkbox
+												input#checkbox8(type='checkbox')
+												label(for='checkbox8') NEW BALANCE
+										li
+											.checkbox
+												input#checkbox9(type='checkbox')
+												label(for='checkbox9') GOLA
+										li
+											.checkbox
+												input#checkbox12(type='checkbox')
+												label(for='checkbox12') BREAK FREE
+										li
+											.checkbox
+												input#checkbox13(type='checkbox')
+												label(for='checkbox13') OSIRIS
+										li
+											.checkbox
+												input#checkbox14(type='checkbox')
+												label(for='checkbox14') BUSTAGRIP
+										li
+											.checkbox
+												input#checkbox15(type='checkbox')
+												label(for='checkbox15') RIDER
+										li
+											.checkbox
+												input#checkbox16(type='checkbox')
+												label(for='checkbox16') CONVERSE
+										li
+											.checkbox
+												input#checkbox22(type='checkbox')
+												label(for='checkbox22') STEEL
+										li
+											.checkbox
+												input#checkbox33(type='checkbox')
+												label(for='checkbox33') C1RCA
+										li
+											.checkbox
+												input#checkbox34(type='checkbox')
+												label(for='checkbox34') SPERRY
+										li
+											.checkbox
+												input#checkbox35(type='checkbox')
+												label(for='checkbox35') DR.MARTENS
+										li
+											.checkbox
+												input#checkbox36(type='checkbox')
+												label(for='checkbox36') TIMBERLAND
+										li
+											.checkbox
+												input#checkbox37(type='checkbox')
+												label(for='checkbox37') ECCO
+										li
+											.checkbox
+												input#checkbox38(type='checkbox')
+												label(for='checkbox38') WISHOT
+										li
+											.checkbox
+												input#checkbox39(type='checkbox')
+												label(for='checkbox39') GRINDERS
+										li
+											.checkbox
+												input#checkbox45(type='checkbox')
+												label(for='checkbox45') COQUI
+										li
+											.checkbox
+												input#checkbox45(type='checkbox')
+												label(for='checkbox45') COQUI
+
+						.bunner
+							.image-holder
+								img(src="img/content/cat-bunner-1.png", alt="")
+						.bunner
+							.image-holder
+								img(src="img/content/cat-bunner-2.png", alt="")
+
+
+					.cat-top
+						a(href="#").filters-btn
+							i.fa.fa-filter(aria-hidden="true")
+						.inline-layout
+							.indicator ПОКАЗАНО С 1 ПО 10 ИЗ 138 (ВСЕГО 138 СТРАНИЦ)
+							.pagination
+								ul.inline-layout
+									li
+										a(href="#").start
+									li
+										a(href="#").prev
+									li
+										a(href="#") ...
+									li
+										a(href="#") 12
+									li
+										a(href="#") 13
+									li.active
+										a(href="#") 14
+									li
+										a(href="#") 15
+									li
+										a(href="#") 16
+									li
+										a(href="#") ...
+									li
+										a(href="#").next
+									li
+										a(href="#").end
+							.sort-holder
+								ul
+									li
+										.select
+											input.select-toggle(type='text')
+											.select-text показать
+											ul.select-content
+												li
+													a(href='#') только новинки
+												li
+													a(href='#') только со скидкой
+												li
+													a(href='#') только лидеры
+									li
+										.select
+											input.select-toggle(type='text')
+											.select-text сортировать
+											ul.select-content
+												li
+													a(href='#') от дешевых к дорогим
+												li
+													a(href='#') от дорогих к дешевым
+												li
+													a(href='#') самые новые
+					.categories-content
+						.products.inline-layout
+							.cat-item
+								.labels-holder
+									.label -30%
+								.image-holder
+									img(src="img/content/sl1.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl2.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl3.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl4.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label -30%
+								.image-holder
+									img(src="img/content/sl1.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl2.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl3.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl4.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label -30%
+								.image-holder
+									img(src="img/content/sl1.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl2.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl3.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							.cat-item
+								.labels-holder
+									.label NEW
+								.image-holder
+									img(src="img/content/sl4.png", alt="")
+								.item-body
+									.text-holder
+										p
+											|Костюм мужской SUIT STARS EVO PL RIB
+									.price-holder
+										span.name Цена:
+										span 1547 uah
+										span.old 2190
+									.prod-sizes
+										p Доступные размеры:
+										ul.inline-layout
+											li
+												a(href="#") XS
+											li
+												a(href="#") S
+											li
+												a(href="#") M
+											li
+												a(href="#") L
+											li
+												a(href="#") XL
+											li
+												a(href="#") XXL
+											li
+												a(href="#") XXXL
+									.rate-holder
+										.reviews
+											a(href="#") Отзывы: 238
+										.stars
+											fieldset.rating
+												input#star5(type='radio', name='rating', value='5')
+												label.full(for='star5', title='Awesome - 5 stars')
+												input#star4half(type='radio', name='rating', value='4 and a half')
+												label.half(for='star4half', title='Pretty good - 4.5 stars')
+												input#star4(type='radio', name='rating', value='4')
+												label.full(for='star4', title='Pretty good - 4 stars')
+												input#star3half(type='radio', name='rating', value='3 and a half')
+												label.half(for='star3half', title='Meh - 3.5 stars')
+												input#star3(type='radio', name='rating', value='3')
+												label.full(for='star3', title='Meh - 3 stars')
+												input#star2half(type='radio', name='rating', value='2 and a half')
+												label.half(for='star2half', title='Kinda bad - 2.5 stars')
+												input#star2(type='radio', name='rating', value='2')
+												label.full(for='star2', title='Kinda bad - 2 stars')
+												input#star1half(type='radio', name='rating', value='1 and a half')
+												label.half(for='star1half', title='Meh - 1.5 stars')
+												input#star1(type='radio', name='rating', value='1')
+												label.full(for='star1', title='Sucks big time - 1 star')
+												input#starhalf(type='radio', name='rating', value='half')
+												label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+					.bott-pagination
+						.pagination
+							ul.inline-layout
+								li
+									a(href="#").start
+								li
+									a(href="#").prev
+								li
+									a(href="#") ...
+								li
+									a(href="#") 12
+								li
+									a(href="#") 13
+								li.active
+									a(href="#") 14
+								li
+									a(href="#") 15
+								li
+									a(href="#") 16
+								li
+									a(href="#") ...
+								li
+									a(href="#").next
+								li
+									a(href="#").end
+
+
+
+
+
+
+
+		section.about
+			.container
+				h2 мужская обувь
+				p
+					|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				.btn-holder
+					a(href="#").button Читать
+
+		section.subscribe
+			.container
+				h2 подпишитесь на акции и получите скидку
+				.search-holder
+					form(action="")
+						input(type="text", placeholder="введите свой е-mail")
+						button Подписаться 
+
+
+							
+		include ./partials/footer.jade
+
+		include ./partials/scripts.jade

@@ -1,0 +1,360 @@
+doctype html
+html(lang='ru')
+	head
+		title product
+
+		include ./partials/head.jade
+
+	body
+		include ./partials/noscript.jade
+		include ./partials/top-line.jade
+		
+
+
+
+		
+		section.breadcrumbs
+			.container
+				ul.inline-layout
+					li
+						a(href="#") Главная
+					li
+						span /
+					li
+						a(href="#") Мужская обувь
+		
+		section.product
+			.container
+				.inline-layout.col-2
+					.images-container
+						.image-holder#image-targ
+							img(src="img/content/prod1.png", alt="")
+							span.label -30%
+						#jsProdSlider.slider-holder
+							.owl-carousel.owl-carousel2
+								.item
+									.prod-item
+										#image-targ
+											.image-holder.video(data-video="gTvKYTHYWGA")
+												img(src="img/content/prod1.png", alt="")
+								.item
+									.prod-item
+										.image-holder
+											img(src="img/content/prod2.png", alt="")
+								.item
+									.prod-item
+										.image-holder
+											img(src="img/content/prod3.png", alt="")
+								.item
+									.prod-item
+										.image-holder
+											img(src="img/content/prod1.png", alt="")
+								.item
+									.prod-item
+										.image-holder
+											img(src="img/content/prod2.png", alt="")
+								.item
+									.prod-item
+										.image-holder
+											img(src="img/content/prod3.png", alt="")
+					.description
+						.description-body
+							h4 Костюм мужской SUIT STARS EVO PL RIB
+							.inline-layout
+								.prod-sizes
+									p Доступные размеры:
+									ul.inline-layout
+										li
+											a(href="#") XS
+										li
+											a(href="#") S
+										li
+											a(href="#") M
+										li
+											a(href="#") L
+										li
+											a(href="#") XL
+										li
+											a(href="#") XXL
+										li
+											a(href="#") XXXL
+								.colors
+									p Доступные цвета:
+									ul.inline-layout
+										li
+											a(href="#").yell
+										li
+											a(href="#").green
+										li
+											a(href="#").pink
+										li
+											a(href="#").red
+							.price-holder
+								span.name Цена:
+								span 1547 uah
+								span.old 2190
+							.btns-holder
+								a(href="#").button купить
+								a(href="#").button.red купить в 1 клик >
+							.share
+								p Поделиться с друзьями:
+								ul.inline-layout
+									li
+										a(href="#")
+											img(src="img/icons/vooz.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons/vooz.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons/vooz.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons/vooz.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons/vooz.svg", alt="")
+									li
+										a(href="#")
+											img(src="img/icons/vooz.svg", alt="")
+							.text-holder
+								p
+									|Бесплатная доставка по Киеву. Доставка по всей Украине любой транспортной компанией по тарифу перевозчика
+						.tabs-holder
+							.main-nav
+								.main-nav
+									.content-nav
+										ul.inline-layout
+											li
+												a(href="#", data-tab="0") описание
+
+											li
+												a(href="#", data-tab="1") характеристики
+											li
+												a(href="#", data-tab="2") отзывы
+											
+									ul#main-tabs.tabs
+										li.tab-item
+											.text-container
+												ul
+													li
+														p
+															b Бренд: 
+															| BRASKA
+													li
+														p
+															b Верх: 
+															| Кожа
+													li
+														p
+															b Материал подкладки:  
+															| кожа
+													li
+														p
+															b Материал подошвы: 
+															| Термопластиковая резина
+													li
+														p
+															b Цвет: 
+															| Белый
+													li
+														p
+															b Каблук: 
+															| Ниже 30мм
+													li
+														p
+															b Сезон:
+															| Весна-Лето 2017
+													li
+														p
+															b Вид товара: 
+															| Полуботинки
+													li
+														p
+															b Страна: 
+															| Украина
+													li
+														p
+															b Стиль:
+															| Повседневный (casual)
+										li.tab-item
+											.text-container
+												h4 Описание
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellendus mollitia rerum nisi deleniti facilis at obcaecati eaque dolorum saepe, unde iure quasi distinctio voluptatibus perferendis. Dolor amet ullam, porro maxime cumque, eos iusto, at numquam reiciendis quia sunt voluptate sed ea cum! Molestias tempore consequatur reiciendis ad molestiae ex ipsum itaque enim tenetur totam eaque rem autem dolorem maiores quia blanditiis provident odio alias modi cumque, consequuntur, in accusamus assumenda. Nihil labore, fugiat dolorem ullam, quam modi, quisquam iste libero autem aspernatur expedita unde qui impedit molestiae? Ullam accusamus asperiores, eaque mollitia vero repellendus eum doloribus minus, perferendis odio.
+										li.tab-item
+											.text-container
+												ul
+													li
+														p
+															b Бренд: 
+															| BRASKA
+													li
+														p
+															b Верх: 
+															| Кожа
+													li
+														p
+															b Материал подкладки:  
+															| кожа
+													li
+														p
+															b Материал подошвы: 
+															| Термопластиковая резина
+													li
+														p
+															b Цвет: 
+															| Белый
+													li
+														p
+															b Каблук: 
+															| Ниже 30мм
+													li
+														p
+															b Сезон:
+															| Весна-Лето 2017
+													li
+														p
+															b Вид товара: 
+															| Полуботинки
+													li
+														p
+															b Страна: 
+															| Украина
+													li
+														p
+															b Стиль:
+															| Повседневный (casual)
+
+									
+
+
+
+		section.popular
+			.container
+				h2 ПОХОЖИЕ ТОВАРЫ В МАГАЗИНЕ
+				.slider-holder
+					.owl-carousel.owl-carousel1
+						.item
+							.best-item
+								.image-holder
+									img(src="img/content/sl1.png", alt="")
+								.text-holder
+									p
+										|Asian Navy Blue & Red Eva Sport Shoes For Men
+								.price-holder
+									span 1547 uah
+									span.old 2190
+								.btn-holder
+									a(href="#").button посмотреть
+						.item
+							.best-item
+								.image-holder
+									img(src="img/content/sl2.png", alt="")
+								.text-holder
+									p
+										|Asian Navy Blue & Red Eva Sport Shoes For Men
+								.price-holder
+									span 1547 uah
+									span.old 2190
+								.btn-holder
+									a(href="#").button посмотреть
+						.item
+							.best-item
+								.image-holder
+									img(src="img/content/sl3.png", alt="")
+								.text-holder
+									p
+										|Asian Navy Blue & Red Eva Sport Shoes For Men
+								.price-holder
+									span 1547 uah
+									span.old 2190
+								.btn-holder
+									a(href="#").button посмотреть
+						.item
+							.best-item
+								.image-holder
+									img(src="img/content/sl4.png", alt="")
+								.text-holder
+									p
+										|Asian Navy Blue & Red Eva Sport Shoes For Men
+								.price-holder
+									span 1547 uah
+									span.old 2190
+								.btn-holder
+									a(href="#").button посмотреть
+						.item
+							.best-item
+								.image-holder
+									img(src="img/content/sl1.png", alt="")
+								.text-holder
+									p
+										|Asian Navy Blue & Red Eva Sport Shoes For Men
+								.price-holder
+									span 1547 uah
+									span.old 2190
+								.btn-holder
+									a(href="#").button посмотреть
+						.item
+							.best-item
+								.image-holder
+									img(src="img/content/sl2.png", alt="")
+								.text-holder
+									p
+										|Asian Navy Blue & Red Eva Sport Shoes For Men
+								.price-holder
+									span 1547 uah
+									span.old 2190
+								.btn-holder
+									a(href="#").button посмотреть
+		section.why
+			.container
+				h2 почему мы?
+				.why-holder.inline-layout.col-4
+					.why-block
+						.image-holder
+							img(src="img/icons/shiping.svg", alt="")
+						.text-holder
+							h5 БЕСПЛАТНАЯ ДОСТАВКА
+							p
+								|Бесплатная доставка по Киеву. Доставка по Украине любым перевозчиком по тарифу. Без изменений
+					.why-block
+						.image-holder.port
+							img(src="img/icons/bag.svg", alt="")
+						.text-holder
+							h5 ВЫБОР СМЕЖНОГО РАЗМЕРА
+							p
+								|Широкий ассортимент размеров, частичный отказ при доставке
+					.why-block
+						.image-holder
+							img(src="img/icons/portmone.svg", alt="")
+						.text-holder
+							h5 ОПЛАТА КУРЬЕРУ И ОНЛАЙН
+							p
+								|Оплата при получении или онлайн
+					.why-block
+						.image-holder.rew
+							img(src="img/icons/reward.svg", alt="")
+						.text-holder
+							h5 ГАРАНТИЯ КАЧЕСТВА
+							p
+								|Только оригинальные товары, мировые бренды
+
+
+
+
+
+
+		section.subscribe
+			.container
+				h2 подпишитесь на акции и получите скидку
+				.search-holder
+					form(action="")
+						input(type="text", placeholder="введите свой е-mail")
+						button Подписаться 
+
+
+							
+		include ./partials/footer.jade
+
+		include ./partials/scripts.jade
