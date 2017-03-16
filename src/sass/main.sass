@@ -21,6 +21,10 @@ body
 
 .header
 	background: #454545
+	position: fixed
+	z-index: 5
+	@media #{$media-md-max}
+		position: static
 	.main-nav,
 	.contacts,
 	.busket
@@ -118,6 +122,11 @@ body
 		vertical-align: top
 		border-left: 1px solid white
 		border-right: 1px solid white
+		background-image: -webkit-linear-gradient(#434343, #232323)
+		background-image: -o-linear-gradient(#434343, #232323)
+		background-image: linear-gradient(#434343, #232323)
+		@media #{$media-md-max}
+			background-image: none
 		@media #{$media-md-max}
 			border: none
 		@media #{$media-xs-max}
@@ -127,6 +136,9 @@ body
 			@media #{$media-md-max}
 				padding: 5px
 				border: 1px solid white
+				background-image: -webkit-linear-gradient(#434343, #232323)
+				background-image: -o-linear-gradient(#434343, #232323)
+				background-image: linear-gradient(#434343, #232323)
 	.busket
 		text-align: right
 		width: 179px
@@ -146,7 +158,7 @@ body
 				font-size: 0.8em
 
 .categories
-	padding-top: 11px
+	padding-top: 51px
 	padding-bottom: 15px
 	text-align: right
 	overflow: hidden
@@ -193,6 +205,11 @@ body
 			padding: 14px 8px
 			font-size: 1.2em
 			margin-left: 7px
+			transition: background.2s, color .2s
+			&:hover
+				background: #454545
+				color: #fff
+				transition: background.2s, color .2s
 			@media #{$media-xg-max}
 				padding: 4px 5px
 				font-size: 1em
@@ -228,6 +245,8 @@ body
 .best-price
 	padding-top: 30px
 	padding-bottom: 50px
+	.owl-stage-outer
+		padding-bottom: 10px
 	h2
 		text-transform: uppercase
 		text-align: center
@@ -241,6 +260,7 @@ body
 	.best-item
 		border: 1px solid #232323
 		padding-bottom: 34px
+		position: relative
 		.image-holder
 			height: 268px
 		.text-holder
@@ -250,6 +270,7 @@ body
 				font-size: 1.2em
 				text-transform: uppercase
 				line-height: 1.4em
+				padding: 0 10px
 	.btn-holder
 		text-align: center
 		margin-top: 11px
@@ -277,7 +298,7 @@ body
 		text-transform: uppercase
 		font-size: 1.2em
 		font-weight: 100
-		bottom: 16px
+		bottom: -14px
 		line-height: 1.6em
 
 
@@ -297,6 +318,8 @@ body
 		height: 421px
 		position: relative
 		background: #f4f4f4
+		@media #{$media-xg-max}
+			height: 340px
 		@media #{$media-mg-max}
 			height: 301px
 		@media #{$media-sm-max}
@@ -542,12 +565,20 @@ body
 				margin-bottom: 0
 				display: inline-block
 				line-height: 1.3em
+				transition: background .2s, color .2s
 			.padd
 				padding-left: 44px
 			.mail
 				margin-top: 5px
 			.links
 				margin-top: 73px
+			&.serv,
+			&.arts
+				a
+					&:hover
+						background: #454545
+						color: #fff
+						transition: background .2s, color .2s
 
 //----------------------------------
 // breadcrumbs
@@ -561,6 +592,8 @@ body
 		margin-right: 2px
 	a
 		text-transform: uppercase
+		&.active
+			text-decoration: underline
 	.cat-name
 		position: absolute
 		top: 0
@@ -624,6 +657,8 @@ body
 		background: #f4f4f4
 		padding-top: 9px
 		text-align: left
+		padding-bottom: 20px
+		margin-bottom: 20px
 		h5
 			text-transform: uppercase
 			font-size: 1em
@@ -635,6 +670,10 @@ body
 			text-align: center
 			color: #ff4d4e
 			font-weight: bold
+		.btn-holder
+			text-align: center
+			.button
+				padding: 0 10px
 	.price-filter
 		padding: 9px
 		padding-top: 10px
@@ -748,6 +787,7 @@ body
 		margin: 10px
 		border: 1px solid transparent
 		@media #{$media-xg-max}
+			width: 264px
 			margin: 8px
 		@media #{$media-xs-max}
 			width: 270px
@@ -810,11 +850,34 @@ body
 .news-page
 	padding-top: 20px
 	padding-bottom: 47px
+	text-align: center
 	&.location
 		.image-holder
 			height: 268px
+			.hover-plate
+				position: absolute
+				top: 0
+				left: 0
+				background: rgba(255, 76, 76, 0.61)
+				width: 100%
+				height: 100%
+				padding-top: 80px
+				opacity: 0
+				transition: opacity .2s
+				img
+					width: 60px
+					height: 60px
+				p
+					color: #ffffff
+					text-transform: uppercase
 			@media #{$media-sm-max}
 				height: auto
+		.news-item
+			&:hover
+				.hover-plate
+					opacity: 1
+					transition: opacity .2s
+
 .news-holder
 	margin: -10px
 	@media #{$media-fd-max}
@@ -823,6 +886,8 @@ body
 	padding: 10px
 	text-align: center
 	margin-bottom: 12px
+	cursor: pointer
+	max-width: 360px
 	@media #{$media-xg-max}
 		width: 25% !important
 	@media #{$media-lg-max}
@@ -869,21 +934,26 @@ body
 	padding-top: 20px
 	.images-container
 		padding-right: 10px
+		@media #{$media-md-max}
+			width: 100%
+			padding: 0
 		> .image-holder
 			border: 1px solid #979797
 			height: 498px
-			.prod-item
-				.video
-					&:after
-						content: ''
-						position: absolute
-						top: 50%
-						left: 50%
-						transform: translateX(-50%) translateY(-50%)
-						background: url(https://cdn3.iconfinder.com/data/icons/social-icons-5/607/YouTube_Play.png) 50% 50%
-						background-size: cover
-						height: 80px
-						width: 80px
+			@media #{$media-md-max}
+				height: 280px
+			&.video
+				cursor: pointer
+				&:after
+					content: ''
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translateX(-50%) translateY(-50%)
+					background: url(../img/icons/play-btn.svg) 50% 50%
+					background-size: cover
+					height: 80px
+					width: 80px
 			.label
 				display: inline-block
 				position: absolute
@@ -896,6 +966,13 @@ body
 			max-width: 620px
 			margin: 0 auto
 			margin-top: 24px
+			padding: 2px
+			@media #{$media-xg-max}
+				max-width: 480px
+			@media #{$media-lg-max}
+				max-width: 400px
+			@media #{$media-md-max}
+				max-width: 620px
 			.owl-next
 				height: 35px
 				width: 17px
@@ -906,43 +983,63 @@ body
 				width: 17px
 				background-size: cover
 				left: -39px
+			.owl-item
+				padding: 2px
+			.border
+				.prod-item
+					border: 1px solid #ff4c4c
 			.prod-item
 				border: 1px solid #979797
-				padding: 2px
 				.image-holder
 					&.video
 						&:after
-							content: ''
+							content: ''3
 							position: absolute
 							top: 50%
 							left: 50%
 							transform: translateX(-50%) translateY(-50%)
-							background: url(https://cdn3.iconfinder.com/data/icons/social-icons-5/607/YouTube_Play.png) 50% 50%
+							background: url(../img/icons/play-btn.svg) 50% 50%
 							background-size: cover
 							height: 40px
 							width: 40px
 	.description
 		padding-left: 10px
 		background: #f4f4f4
+		@media #{$media-md-max}
+			width: 100%
+			margin-top: 20px
+		@media #{$media-lg-max}
+			background: transparent
+			padding: 0
 		.description-body
 			padding: 11px 22px
+			@media #{$media-lg-max}
+				padding: 0
 		h4
 			font-size: 1.83em
 			text-transform: uppercase
 			font-weight: 400
 			line-height: 1.4em
 			margin-bottom: 8px
+			@media #{$media-lg-max}
+				font-size: 1.2em
 		.prod-sizes
 			margin-right: 60px
 		.price-holder
 			padding-left: 117px
+			@media #{$media-lg-max}
+				padding-top: 9px
 			.name
 				top: 13px
 				left: -6px
 				font-size: 1em
+				@media #{$media-lg-max}
+					left: 0
 			span
 				font-size: 2em
 				line-height: 1.2em
+				@media #{$media-lg-max}
+					font-size: 1.5em
 			.old
 				top: 10px
 				left: 43px
@@ -954,6 +1051,8 @@ body
 				padding: 0 10px
 				margin-right: 7px
 				margin-top: 6px
+				@media #{$media-lg-max}
+					font-size: 1em
 		.share
 			margin-top: 18px
 			p
@@ -983,16 +1082,27 @@ body
 		border: none
 	.pay-holder
 		padding: 0 20px
+		@media #{$media-md-max}
+			padding: 0
 	.payment
 		padding-right: 44px
+		@media #{$media-md-max}
+			padding: 0
+			width: 100%
+
 	.shiping
 		padding-left: 50px
+		@media #{$media-md-max}
+			padding: 0
+			width: 100%
 	.pay-block
 		h3
 			font-size: 1.8em
 			text-transform: uppercase
 			margin-bottom: 29px
 			line-height: 1.4em
+			@media #{$media-md-max}
+				font-size: 1.2em
 		.image-holder
 			margin-top: 37px
 			max-width: 620px
@@ -1016,8 +1126,14 @@ body
 	border: 1px solid #c7c3c3
 	position: relative
 	padding-bottom: 20px
+	@media #{$media-sm-max}
+		padding-left: 0
+		height: auto
+		padding-top: 40px
 	.order-table
 		padding-bottom: 14px
+	.scroll-holder
+		overflow: auto
 	.modal-close
 		position: absolute
 		top: 6px
@@ -1028,17 +1144,26 @@ body
 		background-size: cover
 	.order-head
 		a
-			background-image: linear-gradient(to bottom, #434343, #232323)
 			height: 32px
-			color: #fff
 			text-align: center
 			line-height: 32px
 			text-transform: uppercase
 			font-size: 18px
-			color: #fff
-			&:last-child
-				background: transparent
-				color: #000
+			background: transparent
+			color: #000
+			border-top: 1px solid #c7c3c3
+			border-bottom: 1px solid #c7c3c3
+			&.active
+				background-image: -webkit-linear-gradient(#434343, #232323)
+				background-image: -o-linear-gradient(#434343, #232323)
+				background-image: linear-gradient(#434343, #232323)
+				color: #fff
+				@media #{$media-sm-max}
+					border-top: 1px solid #434343
+	.order-block
+		@media #{$media-sm-max}
+			width: 100%
+			padding-bottom: 20px
 	.head
 		background: #ff4c4d
 		height: 41px
@@ -1048,6 +1173,14 @@ body
 		font-size: 1.2em
 		line-height: 41px
 		color: #fff
+	.js-ship-type
+		.input-holder
+			display: none
+		&.samo
+			.select-holder
+				display: none
+			.input-holder
+				display: block
 	.order-row
 		height: 40px
 		position: relative
@@ -1130,6 +1263,7 @@ body
 			color: #ff4c4c
 	.products-table
 		text-transform: uppercase
+		min-width: 760px
 		table
 			width: 100%
 		th
@@ -1250,11 +1384,24 @@ body
 			font-size: 1.2em
 			text-transform: uppercase
 			display: inline-block
+.order-modal
+	padding-top: 30px
+	&.call
+		.order-table
+			display: none
+		.mobile-modal
+			display: block
 .mobile-modal
 	max-width: 600px
 	height: 202px
 	padding-left: 198px
 	padding-top: 20px
+	margin: 0 auto
+	display: none
+	margin-top: 30px
+	@media #{$media-sm-max}
+		height: auto
+		padding: 10px
 	.call-icon
 		position: absolute
 		top: 0
@@ -1264,15 +1411,26 @@ body
 		background: #ff4c4c
 		background-size: cover
 		padding: 33px
+		@media #{$media-sm-max}
+			position: static
+			height: 70px
+			width: 70px
+			padding: 5px
+			margin: 0 auto
 		img
 			width: 100%
 	.text-holder
 		padding-left: 35px
 		padding-right: 60px
+		@media #{$media-sm-max}
+			padding: 0
+			margin-top: 20px
 		p
 			text-transform: uppercase
 			font-size: 1.2em
 			line-height: 1.4em
+			@media #{$media-sm-max}
+				font-size: 1em
 		input
 			outline: none
 			margin-top: 11px
@@ -1292,3 +1450,23 @@ body
 			.button
 				padding: 2px 20px
 
+
+.thnks-modal
+	padding-top: 60px
+	text-align: center
+	max-width: 600px
+	h3
+		font-size: 24px
+		font-weight: 400
+	.button
+		padding: 0 20px
+		margin-top: 40px
+
+.products-table .rem-btn
+	display: inline-block
+	height: 20px
+	width: 20px
+	vertical-align: middle
+	margin-left: 10px
+	background: url(../img/icons/modal-close.svg) 50% 50% no-repeat
+	background-size: cover

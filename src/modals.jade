@@ -14,16 +14,7 @@ html(lang='ru')
 		
 		section.modals
 
-			.mobile-modal
-				a(href="#").modal-close
-				.call-icon
-					img(src="img/icons/call-modal.svg", alt="")
-				.text-holder
-					p
-						|введите ваш номер телефона и наши менеджеры свяжутся с вами в ближайшее время
-					input(type="text", placeholder="+38 /ххх/ ххх хх хх")
-					.btns
-						button.button перезвоните мне
+			
 				
 
 				
@@ -31,8 +22,8 @@ html(lang='ru')
 			.order-modal
 				.order-head
 					.inline-layout.col-2
-						a(href="#") Полный заказ
-						a(href="#") быстрый заказ
+						a(href="#").type-sw.active Полный заказ
+						a(href="#").type-sw быстрый заказ
 				.order-table
 					a(href="#").modal-close
 					.inline-layout.col-3
@@ -42,7 +33,7 @@ html(lang='ru')
 							.ship-type
 								.order-row
 									.radio.form-group
-											input#radio1(type='radio', name="ship", value="1")
+											input#radio1(type='radio', name="ship", value="samo")
 											label(for='radio1') Самовывоз
 										.status
 											span бесплатно
@@ -77,13 +68,16 @@ html(lang='ru')
 								.order-row
 									.form-group
 										input(type="text", placeholder='e-mail')
-								.order-row
+								.order-row.js-ship-type
 									.form-group.select-holder
 										select#23(name="we")
-											option(value="1") макрос
-											option(value="2") макрос
-											option(value="3") макрос
-											option(value="4") макрос
+											option(value="1") Выбрать магазин
+											option(value="2") Шевченка 350
+											option(value="3") Шевченка 353
+											option(value="4") Шевченка 357
+									.form-group.input-holder
+										input(type="text", placeholder='Ваш адресс')
+
 								.order-row
 									.form-group
 										input(type="text", placeholder='коментарий')
@@ -96,7 +90,7 @@ html(lang='ru')
 								.order-row
 									.radio.form-group
 											input#radio5(type='radio', name="pay", value="1")
-											label(for='radio5') Самовывоз
+											label(for='radio5') Наложеный платеж
 								.order-row
 									.radio.form-group
 										input#radio6(type='radio', name="pay", value="1")
@@ -104,12 +98,26 @@ html(lang='ru')
 								.order-row
 									.radio.form-group
 										input#radio7(type='radio', name="pay", value="1")
-										label(for='radio7') Оплата картой
+										label(for='radio7') Оплата картой ПриватБанка
+								.order-row
+									.radio.form-group
+										input#radio7(type='radio', name="pay", value="1")
+										label(for='radio7') Оплата наличными курьеру
 								.order-row
 								.order-row
 								.total
 									span итого: 
 									span.num  3831
+
+				.mobile-modal
+					.call-icon
+						img(src="img/icons/call-modal.svg", alt="")
+					.text-holder
+						p
+							|введите ваш номер телефона и наши менеджеры свяжутся с вами в ближайшее время
+						input(type="text", placeholder="+38 /ххх/ ххх хх хх")
+						.btns
+							button.button перезвоните мне
 
 			section(style="margin-top: 100px")
 
@@ -119,74 +127,78 @@ html(lang='ru')
 					img(src="img/icons/1252.svg", alt="")
 					span Ваша корзина
 
-				.products-table
-					table
-						tbody
-							tr.order-row
-								th товар
-								th размер
-								th количество
-								th цена
-							tr.order-row
-								td
-									.description Asian Navy Blue & Red Eva Sport Shoes For Men
-								td
-									.select-holder
-										.select-wrap
-											select#e(name="e")
-												option(value="1") 37
-												option(value="1") 32
-												option(value="1") 33
-												option(value="1") 34
-												option(value="1") 37
-								td
-									.quan
-										a(href="#").incr
-										input(type="number", value="1")
-										a(href="#").dec
-								td
-									.price 
-										span 1277
-							tr.order-row
-								td
-									.description Asian Navy Blue & Red Eva Sport Shoes For Men
-								td
-									.select-holder
-										.select-wrap
-											select#e(name="e")
-												option(value="1") 37
-												option(value="1") 32
-												option(value="1") 33
-												option(value="1") 34
-												option(value="1") 37
-								td
-									.quan
-										a(href="#").incr
-										input(type="number", value="1")
-										a(href="#").dec
-								td
-									.price 
-										span 1277
-							tr.order-row
-								td
-									.description Asian Navy Blue & Red Eva Sport Shoes For Men
-								td
-									.select-holder
-										.select-wrap
-											select#e(name="e")
-												option(value="1") 37
-												option(value="1") 32
-												option(value="1") 33
-												option(value="1") 34
-												option(value="1") 37
-								td
-									.quan
-										a(href="#").incr
-										input(type="number", value="1")
-										a(href="#").dec
-								td
-									.price 
-										span 1277
+				.scroll-holder
+					.products-table
+							table
+								tbody
+									tr.order-row
+										th товар
+										th размер
+										th количество
+										th цена
+									tr.order-row
+										td
+											.description Asian Navy Blue & Red Eva Sport Shoes For Men
+										td
+											.select-holder
+												.select-wrap
+													select#e(name="e")
+														option(value="1") 37
+														option(value="1") 32
+														option(value="1") 33
+														option(value="1") 34
+														option(value="1") 37
+										td
+											.quan
+												a(href="#").incr
+												input(type="number", value="1")
+												a(href="#").dec
+										td
+											.price 
+												span 1277
+												a(href="#").rem-btn
+									tr.order-row
+										td
+											.description Asian Navy Blue & Red Eva Sport Shoes For Men
+										td
+											.select-holder
+												.select-wrap
+													select#e(name="e")
+														option(value="1") 37
+														option(value="1") 32
+														option(value="1") 33
+														option(value="1") 34
+														option(value="1") 37
+										td
+											.quan
+												a(href="#").incr
+												input(type="number", value="1")
+												a(href="#").dec
+										td
+											.price 
+												span 1277
+												a(href="#").rem-btn
+									tr.order-row
+										td
+											.description Asian Navy Blue & Red Eva Sport Shoes For Men
+										td
+											.select-holder
+												.select-wrap
+													select#e(name="e")
+														option(value="1") 37
+														option(value="1") 32
+														option(value="1") 33
+														option(value="1") 34
+														option(value="1") 37
+										td
+											.quan
+												a(href="#").incr
+												input(type="number", value="1")
+												a(href="#").dec
+										td
+											.price 
+												span 1277
+												a(href="#").rem-btn
 					.order-row
 						.total
 							span итого: 
@@ -196,6 +208,18 @@ html(lang='ru')
 					.back-basket
 						a(href="#").to-basket
 							span вернуться в корзину…
+
+
+
+
+			section(style="margin-top: 100px")
+
+			.order-modal.thnks-modal
+				a(href="#").modal-close
+				.text-holder
+					h3 СПАСИБО ЗА ЗАКАЗ!
+					.btns
+						button.button ЗАКРЫТЬ
 
 
 

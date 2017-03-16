@@ -7,18 +7,18 @@ $('.owl-carousel1').owlCarousel({
     responsive:{
         0: {
             items: 1,
-            nav: false
+            nav: true
         },
         580: {
             items: 2,
-            nav: false
+            nav: true
         },
         992: {
             items: 3,
             nav: true
         },
-        1350: {
-            items: 3,
+        1300: {
+            items: 4,
             nav: true
         },
         1540: {
@@ -34,19 +34,51 @@ var owl = $('.owl-carousel2').owlCarousel({
     responsiveClass: true,
     responsive:{
         0: {
-            items: 1,
-            nav: true
+            items: 2,
+            nav: false
+        },
+        480: {
+            items: 2,
+            nav: false
         },
         600: {
             items: 3,
             nav: false
         },
-        1000: {
+        1200: {
+            items: 3,
+            nav: true
+        },
+        1540: {
             items: 4,
             nav: true
         }
     }
 });
+
+
+$(window).on('load', function() {
+    $('#jsProdSlider .owl-item.active .item').eq(0).addClass('border');
+});
+
+  $('#jsProdSlider .owl-item').each(function(i) {
+
+  });
+
+
+$('#jsProdSlider').on('click', function(e) {
+  var targ = $(e.target).closest('.owl-item'),
+      elIndex = $('#jsProdSlider .owl-item').index(targ);
+
+      console.log(elIndex);
+
+      owl.trigger('to.owl.carousel', [elIndex + 3, 500, true]);
+});
+    // $(this).on('click', function() {
+    //     
+    // });
+  
+
 
 owl.on('changed.owl.carousel', function(event) {
 
@@ -55,9 +87,19 @@ owl.on('changed.owl.carousel', function(event) {
       $curentSlide = $('#jsProdSlider .item').eq(owlCurIndex),
       videoAttr = $curentSlide.find('.image-holder').attr('data-video');
 
-      $mainImgTarg.html($curentSlide.find('.prod-item').clone());
+      $('#jsProdSlider .item').removeClass('border');
+      $curentSlide.addClass('border');
 
-      $('#image-targ .video').on('click', function() {
+      if ($curentSlide.find('.prod-item .image-holder').hasClass('video')) {
+        $mainImgTarg.addClass('video').attr('data-video', videoAttr);
+      } else {
+        $mainImgTarg.removeClass('video').attr('data-video', '');
+      }
+
+      $mainImgTarg.html($curentSlide.find('.prod-item .image-holder').html());
+
+
+      $('#image-targ.video').on('click', function() {
 
         $mainImgTarg.html('<iframe src="https://www.youtube.com/embed/'+videoAttr+'?enablejsapi=1" id="ytVid" frameborder="0" allowfullscreen></iframe>');
 
@@ -65,15 +107,16 @@ owl.on('changed.owl.carousel', function(event) {
           document.getElementById("ytVid").contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
         });
 
+        $mainImgTarg.removeClass('video');
+
       });
 
 });
 
 $(window).on('load', function() {
-  $('#image-targ .video').on('click', function() {
-    var $mainImgTarg = $('#image-targ .video'),
+  $('#image-targ.video').on('click', function() {
+    var $mainImgTarg = $('#image-targ.video'),
         videoAttr = $mainImgTarg.attr('data-video');
-
 
         $($mainImgTarg).css('height', $($mainImgTarg).height());
         $mainImgTarg.html('<iframe src="https://www.youtube.com/embed/'+videoAttr+'?enablejsapi=1" id="ytVid" frameborder="0" allowfullscreen></iframe>');
@@ -81,6 +124,8 @@ $(window).on('load', function() {
     $('#ytVid').on('load', function() {
       document.getElementById("ytVid").contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
+
+    $mainImgTarg.removeClass('video');
           
   });
 });
@@ -226,3 +271,49 @@ $('.aside-panel .close-btn').on('click', function(e) {
   e.preventDefault();
   $('.aside-panel').removeClass('open');
 })
+
+
+
+$('.text-over-toggle').each(function() {
+  $(this).on('click', function(e) {
+    e.preventDefault();
+    $(this).closest('.text-container').find('.text-holder-over').toggleClass('active');
+  });
+})
+
+
+$('.location .news-item').each(function() {
+  $(this).on('click', function() {
+    var top = $('#map').offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  })
+});
+
+
+$('.rem-btn').each(function() {
+  $(this).on('click', function() {
+    $(this).closest('tr').remove();
+  })
+});
+
+$('.type-sw').each(function() {
+  $(this).on('click', function(e) {
+    e.preventDefault();
+    $('.order-modal').toggleClass('call');
+    $('.type-sw').removeClass('active')
+    $(this).addClass('active')
+  });
+});
+
+
+$('.order-row input').each(function() {
+  $(this).on('change', function() {
+    var val = $(this).val();
+
+    if (val == 'samo') {
+      $('.js-ship-type').addClass('samo');
+    } else {
+      $('.js-ship-type').removeClass('samo');
+    }
+  })
+});

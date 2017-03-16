@@ -13,50 +13,48 @@ html(lang='ru')
 
 
 		
-		section.breadcrumbs
-			.container
-				ul.inline-layout
-					li
-						a(href="#") Главная
-					li
-						span /
-					li
-						a(href="#") Мужская обувь
+		include ./partials/breadcrumbs.jade
 		
 		section.product
 			.container
 				.inline-layout.col-2
 					.images-container
-						.image-holder#image-targ
-							img(src="img/content/prod1.png", alt="")
+						#image-targ.image-holder.video(data-video="gTvKYTHYWGA")
+							img.fake-img(src='img/content/prod1.png', alt='img/content/prod1.png')
+							.img(style='background-image: url("img/content/prod1.png")')
 							span.label -30%
 						#jsProdSlider.slider-holder
 							.owl-carousel.owl-carousel2
 								.item
 									.prod-item
-										#image-targ
-											.image-holder.video(data-video="gTvKYTHYWGA")
-												img(src="img/content/prod1.png", alt="")
+										.image-holder.video(data-video="gTvKYTHYWGA")
+											img.fake-img(src='img/content/prod1.png', alt='img/content/prod1.png')
+											.img(style='background-image: url("img/content/prod1.png")')
 								.item
 									.prod-item
 										.image-holder
-											img(src="img/content/prod2.png", alt="")
+											img.fake-img(src='img/content/prod2.png', alt='img/content/prod2.png')
+											.img(style='background-image: url("img/content/prod2.png")')
 								.item
 									.prod-item
 										.image-holder
-											img(src="img/content/prod3.png", alt="")
+											img.fake-img(src='img/content/prod3.png', alt='img/content/prod3.png')
+											.img(style='background-image: url("img/content/prod3.png")')
 								.item
 									.prod-item
 										.image-holder
-											img(src="img/content/prod1.png", alt="")
+											img.fake-img(src='img/content/prod1.png', alt='img/content/prod1.png')
+											.img(style='background-image: url("img/content/prod1.png")')
 								.item
 									.prod-item
 										.image-holder
-											img(src="img/content/prod2.png", alt="")
+											img.fake-img(src='img/content/prod2.png', alt='img/content/prod2.png')
+											.img(style='background-image: url("img/content/prod2.png")')
 								.item
 									.prod-item
 										.image-holder
-											img(src="img/content/prod3.png", alt="")
+											img.fake-img(src='img/content/prod3.png', alt='img/content/prod3.png')
+											.img(style='background-image: url("img/content/prod3.png")')
 					.description
 						.description-body
 							h4 Костюм мужской SUIT STARS EVO PL RIB
@@ -82,7 +80,7 @@ html(lang='ru')
 									p Доступные цвета:
 									ul.inline-layout
 										li
-											a(href="#").yell
+											a(href="#").yell.active
 										li
 											a(href="#").green
 										li
@@ -136,6 +134,11 @@ html(lang='ru')
 									ul#main-tabs.tabs
 										li.tab-item
 											.text-container
+												h4 Описание
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellendus mollitia rerum nisi deleniti facilis at obcaecati eaque dolorum saepe, unde iure quasi distinctio voluptatibus perferendis. Dolor amet ullam, porro maxime cumque, eos iusto, at numquam reiciendis quia sunt voluptate sed ea cum! Molestias tempore consequatur reiciendis ad molestiae ex ipsum itaque enim tenetur totam eaque rem autem dolorem maiores quia blanditiis provident odio alias modi cumque, consequuntur, in accusamus assumenda. Nihil labore, fugiat dolorem ullam, quam modi, quisquam iste libero autem aspernatur expedita unde qui impedit molestiae? Ullam accusamus asperiores, eaque mollitia vero repellendus eum doloribus minus, perferendis odio.
+										li.tab-item
+											.text-container
 												ul
 													li
 														p
@@ -177,11 +180,7 @@ html(lang='ru')
 														p
 															b Стиль:
 															| Повседневный (casual)
-										li.tab-item
-											.text-container
-												h4 Описание
-												p
-													| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellendus mollitia rerum nisi deleniti facilis at obcaecati eaque dolorum saepe, unde iure quasi distinctio voluptatibus perferendis. Dolor amet ullam, porro maxime cumque, eos iusto, at numquam reiciendis quia sunt voluptate sed ea cum! Molestias tempore consequatur reiciendis ad molestiae ex ipsum itaque enim tenetur totam eaque rem autem dolorem maiores quia blanditiis provident odio alias modi cumque, consequuntur, in accusamus assumenda. Nihil labore, fugiat dolorem ullam, quam modi, quisquam iste libero autem aspernatur expedita unde qui impedit molestiae? Ullam accusamus asperiores, eaque mollitia vero repellendus eum doloribus minus, perferendis odio.
+											
 										li.tab-item
 											.text-container
 												ul
@@ -232,79 +231,91 @@ html(lang='ru')
 
 		section.popular
 			.container
-				h2 ПОХОЖИЕ ТОВАРЫ В МАГАЗИНЕ
+				h2 ПОПУЛЯРНЫЕ ТОВАРЫ В МАГАЗИНЕ
 				.slider-holder
-					.owl-carousel.owl-carousel1
+					.owl-carousel1.owl-carousel
 						.item
 							.best-item
 								.image-holder
-									img(src="img/content/sl1.png", alt="")
+									img.fake-img(src='img/content/sl1.png', alt='img/content/sl1.png')
+									.img(style='background-image: url("img/content/sl1.png")')
 								.text-holder
 									p
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
-								.price-holder
-									span 1547 uah
-									span.old 2190
+								.price-wrap
+									.price-holder
+										span 1547 uah
+										span.old 2190
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
 							.best-item
 								.image-holder
-									img(src="img/content/sl2.png", alt="")
+									img.fake-img(src='img/content/sl2.png', alt='img/content/sl2.png')
+									.img(style='background-image: url("img/content/sl2.png")')
 								.text-holder
 									p
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
-								.price-holder
-									span 1547 uah
-									span.old 2190
+								.price-wrap
+									.price-holder
+										span 1547 uah
+										span.old 2190
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
 							.best-item
 								.image-holder
-									img(src="img/content/sl3.png", alt="")
+									img.fake-img(src='img/content/sl3.png', alt='img/content/sl3.png')
+									.img(style='background-image: url("img/content/sl3.png")')
 								.text-holder
 									p
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
-								.price-holder
-									span 1547 uah
-									span.old 2190
+								.price-wrap
+									.price-holder
+										span 1547 uah
+										span.old 2190
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
 							.best-item
 								.image-holder
-									img(src="img/content/sl4.png", alt="")
+									img.fake-img(src='img/content/sl4.png', alt='img/content/sl4.png')
+									.img(style='background-image: url("img/content/sl4.png")')
 								.text-holder
 									p
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
-								.price-holder
-									span 1547 uah
-									span.old 2190
+								.price-wrap
+									.price-holder
+										span 1547 uah
+										span.old 2190
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
 							.best-item
 								.image-holder
-									img(src="img/content/sl1.png", alt="")
+									img.fake-img(src='img/content/sl1.png', alt='img/content/sl1.png')
+									.img(style='background-image: url("img/content/sl1.png")')
 								.text-holder
 									p
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
-								.price-holder
-									span 1547 uah
-									span.old 2190
+								.price-wrap
+									.price-holder
+										span 1547 uah
+										span.old 2190
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
 							.best-item
 								.image-holder
-									img(src="img/content/sl2.png", alt="")
+									img.fake-img(src='img/content/sl2.png', alt='img/content/sl2.png')
+									.img(style='background-image: url("img/content/sl2.png")')
 								.text-holder
 									p
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
-								.price-holder
-									span 1547 uah
-									span.old 2190
+								.price-wrap
+									.price-holder
+										span 1547 uah
+										span.old 2190
 								.btn-holder
 									a(href="#").button посмотреть
 		section.why
