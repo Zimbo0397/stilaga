@@ -29,7 +29,7 @@ $('.owl-carousel1').owlCarousel({
 });
 
 var owl = $('.owl-carousel2').owlCarousel({
-    loop: true,
+    loop: false,
     margin: 22,
     responsiveClass: true,
     responsive:{
@@ -57,27 +57,53 @@ var owl = $('.owl-carousel2').owlCarousel({
 });
 
 
+var owl = $('.owl-carousel9').owlCarousel({
+    loop: true,
+    items: 1,
+    nav: true
+});
+
+
 $(window).on('load', function() {
     $('#jsProdSlider .owl-item.active .item').eq(0).addClass('border');
 });
 
   $('#jsProdSlider .owl-item').each(function(i) {
+    $(this).on('click', function(event) {
+          
+          var $mainImgTarg = $('#image-targ'),
+          $curentSlide = $(this),
+          videoAttr = $curentSlide.find('.image-holder').attr('data-video');
 
+          $('#jsProdSlider .item').removeClass('border');
+          $('#jsProdSlider .owl-item').removeClass('border');
+          $curentSlide.addClass('border');
+
+          if ($curentSlide.find('.prod-item .image-holder').hasClass('video')) {
+            $mainImgTarg.addClass('video').attr('data-video', videoAttr);
+          } else {
+            $mainImgTarg.removeClass('video').attr('data-video', '');
+          }
+
+          $mainImgTarg.html($curentSlide.find('.prod-item .image-holder').html());
+
+
+          $('#image-targ.video').on('click', function() {
+
+            $mainImgTarg.html('<iframe src="https://www.youtube.com/embed/'+videoAttr+'?enablejsapi=1" id="ytVid" frameborder="0" allowfullscreen></iframe>');
+
+            $('#ytVid').on('load', function() {
+              document.getElementById("ytVid").contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            });
+
+            $mainImgTarg.removeClass('video');
+
+          });
+
+    });
   });
 
 
-$('#jsProdSlider').on('click', function(e) {
-  var targ = $(e.target).closest('.owl-item'),
-      elIndex = $('#jsProdSlider .owl-item').index(targ);
-
-      console.log(elIndex);
-
-      owl.trigger('to.owl.carousel', [elIndex + 3, 500, true]);
-});
-    // $(this).on('click', function() {
-    //     
-    // });
-  
 
 
 owl.on('changed.owl.carousel', function(event) {
@@ -116,6 +142,23 @@ owl.on('changed.owl.carousel', function(event) {
 $(window).on('load', function() {
   $('#image-targ.video').on('click', function() {
     var $mainImgTarg = $('#image-targ.video'),
+        videoAttr = $mainImgTarg.attr('data-video');
+
+        $($mainImgTarg).css('height', $($mainImgTarg).height());
+        $mainImgTarg.html('<iframe src="https://www.youtube.com/embed/'+videoAttr+'?enablejsapi=1" id="ytVid" frameborder="0" allowfullscreen></iframe>');
+
+    $('#ytVid').on('load', function() {
+      document.getElementById("ytVid").contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    });
+
+    $mainImgTarg.removeClass('video');
+          
+  });
+});
+
+$(window).on('load', function() {
+  $('#image-targ .video').on('click', function() {
+    var $mainImgTarg = $('#image-targ .video'),
         videoAttr = $mainImgTarg.attr('data-video');
 
         $($mainImgTarg).css('height', $($mainImgTarg).height());
@@ -278,6 +321,7 @@ $('.text-over-toggle').each(function() {
   $(this).on('click', function(e) {
     e.preventDefault();
     $(this).closest('.text-container').find('.text-holder-over').toggleClass('active');
+    $(this).closest('.text-container').find('.btn-holder').toggleClass('active');
   });
 })
 
@@ -306,14 +350,53 @@ $('.type-sw').each(function() {
 });
 
 
-$('.order-row input').each(function() {
+$('.js-ship .order-row input').each(function() {
   $(this).on('change', function() {
     var val = $(this).val();
 
     if (val == 'samo') {
-      $('.js-ship-type').addClass('samo');
-    } else {
       $('.js-ship-type').removeClass('samo');
+    } else {
+      $('.js-ship-type').addClass('samo');
     }
   })
 });
+
+
+$('.list-item').each(function() {
+  $(this).on('click', function() {
+    $(this).siblings('.list-item').removeClass('active');
+    $(this).toggleClass('active');
+  });
+});
+
+
+
+
+$('.prod-sizes .option').each(function() {
+  var $self = $(this);
+  $self.on('click', function(e) {
+    e.preventDefault();
+    var val = $self.text(),
+        targ = $self.closest('.prod-sizes').find('select').val(val);
+      $('.option').removeClass('active');
+      $self.addClass('active');
+  });
+});
+
+
+$('.js-reg-field').each(function() {
+  $(this).on('keyup', function() {
+    console.log(1);
+    var $tel = $(this).find('.js-valid-phone');
+      var telRegex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+      if (!telRegex.test($tel.val())) {
+        err = $($tel);
+        $($tel).removeClass('confirm').addClass('error');
+      } else {
+
+        $($tel).removeClass('error').addClass('confirm')
+      }
+  });
+});
+

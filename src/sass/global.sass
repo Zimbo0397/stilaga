@@ -570,7 +570,7 @@ button, .btn, input[type="button"]
 		left: -20px
 
 .price-holder
-	padding-left: 93px
+	// padding-left: 93px
 	position: relative
 	margin-top: 9px
 	text-align: left
@@ -582,15 +582,15 @@ button, .btn, input[type="button"]
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
-		width: 100%
 		display: inline-block
+		max-width: 123px
 		&.old
-			position: absolute
-			top: 2px
-			left: 22px
+			position: relative
+			top: 3px
+			left: 3px
 			display: inline-block
-			width: 54px
-			text-align: right
+			width: 48px
+			text-align: left
 			font-size: 0.95em
 			color: #9b9b9b
 			text-decoration: line-through
@@ -607,7 +607,7 @@ button, .btn, input[type="button"]
 	text-align: center
 	.price-holder
 		display: inline-block
-		padding-left: 73px
+		// padding-left: 73px
 		.old
 			left: 2px
 
@@ -768,6 +768,17 @@ button, .btn, input[type="button"]
 			@media #{$media-xg-max}
 				font-size: 1em
 				padding: 0px 3px
+			&.active
+				background: #bfb3b3
+	select
+		height: 0
+		width: 0
+		overflow: hidden
+		margin: 0
+		padding: 0
+		border: none
+		opacity: 0.2
+		display: inherit
 //----------------------------------
 // prod-sizes END
 //----------------------------------
@@ -867,6 +878,7 @@ button, .btn, input[type="button"]
 		overflow: hidden
 		height: 230px
 		padding: 18px 22px
+		overflow-y: auto
 //----------------------------------
 // tabs END
 //----------------------------------
@@ -951,20 +963,22 @@ button, .btn, input[type="button"]
 //----------------------------------
 // mobile-nav-btn
 //----------------------------------
-.mobile-nav-btn
-	display: inline-block
-	padding: 0px
-	position: relative
-	top: 5px
-	left: 0px
-	@media #{$media-md-min}
-		display: none
-	span
-		height: 5px
-		width: 40px
-		background: #454545
-		display: block
-		margin-bottom: 5px
+.categories
+	.top-cat
+		.mobile-nav-btn
+			display: inline-block
+			padding: 0px
+			position: relative
+			top: 5px
+			left: 0px
+			@media #{$media-md-min}
+				display: none
+			span
+				height: 5px
+				width: 40px
+				background: #454545
+				display: block
+				margin-bottom: 5px
 //----------------------------------
 // mobile-nav-btn
 //----------------------------------
@@ -986,3 +1000,15 @@ button, .btn, input[type="button"]
 		max-height: 10000px
 		overflow: initial
 		transition: max-height .2s
+.btn-holder
+	.hide
+		display: none
+	&.active
+		span
+			display: none
+			&.hide
+				display: inline-block
+
+.inline-el
+	display: inline-block
+	vertical-align: middle

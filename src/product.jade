@@ -57,25 +57,33 @@ html(lang='ru')
 											.img(style='background-image: url("img/content/prod3.png")')
 					.description
 						.description-body
-							h4 Костюм мужской SUIT STARS EVO PL RIB
+							h1 Костюм мужской SUIT STARS EVO PL RIB
 							.inline-layout
 								.prod-sizes
 									p Доступные размеры:
 									ul.inline-layout
 										li
-											a(href="#") XS
+											a.option(href="#") XS
 										li
-											a(href="#") S
+											a.option(href="#") S
 										li
-											a(href="#") M
+											a.option(href="#") M
 										li
-											a(href="#") L
+											a.option(href="#") L
 										li
-											a(href="#") XL
+											a.option(href="#") XL
 										li
-											a(href="#") XXL
+											a.option(href="#") XXL
 										li
-											a(href="#") XXXL
+											a.option(href="#") XXXL
+									select#34.prod-select(name="prod-select")
+										option(value="XS", selected) XS
+										option(value="S") S
+										option(value="M") M
+										option(value="L") L
+										option(value="XL") XL
+										option(value="XXL") XXL
+										option(value="XXXL") XXXL
 								.colors
 									p Доступные цвета:
 									ul.inline-layout
@@ -89,8 +97,8 @@ html(lang='ru')
 											a(href="#").red
 							.price-holder
 								span.name Цена:
-								span 1547 uah
 								span.old 2190
+								span 1547 uah
 							.btns-holder
 								a(href="#").button купить
 								a(href="#").button.red купить в 1 клик >
@@ -182,48 +190,31 @@ html(lang='ru')
 															| Повседневный (casual)
 											
 										li.tab-item
-											.text-container
-												ul
-													li
-														p
-															b Бренд: 
-															| BRASKA
-													li
-														p
-															b Верх: 
-															| Кожа
-													li
-														p
-															b Материал подкладки:  
-															| кожа
-													li
-														p
-															b Материал подошвы: 
-															| Термопластиковая резина
-													li
-														p
-															b Цвет: 
-															| Белый
-													li
-														p
-															b Каблук: 
-															| Ниже 30мм
-													li
-														p
-															b Сезон:
-															| Весна-Лето 2017
-													li
-														p
-															b Вид товара: 
-															| Полуботинки
-													li
-														p
-															b Страна: 
-															| Украина
-													li
-														p
-															b Стиль:
-															| Повседневный (casual)
+											.comments
+												.text-container
+														ul
+															li
+																p.name Илья Елисеев
+																p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint.
+															li
+																p.name Илья Елисеев
+																p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint.
+															li
+																p.name Илья Елисеев
+																p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint.
+															li
+																p.name Илья Елисеев
+																p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint.
+															li
+																p.name Илья Елисеев
+																p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sint.
+													.leave-comment
+														form(action="3434")
+															input(type="text", placeholder="Имя")
+															input(type="text", placeholder="телефон")
+															textarea#ere(name="", placeholder="Сообщение")
+															.btn-holder
+																button.button Отправить
 
 									
 
@@ -244,8 +235,8 @@ html(lang='ru')
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
 								.price-wrap
 									.price-holder
-										span 1547 uah
 										span.old 2190
+										span 1547 uah
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
@@ -258,8 +249,8 @@ html(lang='ru')
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
 								.price-wrap
 									.price-holder
-										span 1547 uah
 										span.old 2190
+										span 1547 uah
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
@@ -272,8 +263,8 @@ html(lang='ru')
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
 								.price-wrap
 									.price-holder
-										span 1547 uah
 										span.old 2190
+										span 1547 uah
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
@@ -286,8 +277,8 @@ html(lang='ru')
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
 								.price-wrap
 									.price-holder
-										span 1547 uah
 										span.old 2190
+										span 1547 uah
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
@@ -300,8 +291,8 @@ html(lang='ru')
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
 								.price-wrap
 									.price-holder
-										span 1547 uah
 										span.old 2190
+										span 1547 uah
 								.btn-holder
 									a(href="#").button посмотреть
 						.item
@@ -314,8 +305,8 @@ html(lang='ru')
 										|Asian Navy Blue & Red Eva Sport Shoes For Men
 								.price-wrap
 									.price-holder
-										span 1547 uah
 										span.old 2190
+										span 1547 uah
 								.btn-holder
 									a(href="#").button посмотреть
 		section.why

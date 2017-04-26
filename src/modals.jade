@@ -16,7 +16,17 @@ html(lang='ru')
 
 			
 				
-
+			.mobile-modal
+				a(href="#").modal-close
+				.call-icon
+					img(src="img/icons/call-modal.svg", alt="")
+				.text-holder
+					p
+						|введите ваш номер телефона и наши менеджеры свяжутся с вами в ближайшее время
+					form.js-reg-field
+						input.js-valid-phone(name="field", placeholder="+38 /ххх/ ххх хх хх")
+						.btns
+							button.button перезвоните мне
 				
 			div(style="margin-top: 100px")
 			.order-modal
@@ -30,7 +40,7 @@ html(lang='ru')
 						.order-block
 							.head
 								span Способ доставки
-							.ship-type
+							.ship-type.js-ship
 								.order-row
 									.radio.form-group
 											input#radio1(type='radio', name="ship", value="samo")
@@ -101,13 +111,11 @@ html(lang='ru')
 										label(for='radio7') Оплата картой ПриватБанка
 								.order-row
 									.radio.form-group
-										input#radio7(type='radio', name="pay", value="1")
-										label(for='radio7') Оплата наличными курьеру
+										input#radio8(type='radio', name="pay", value="1")
+										label(for='radio8') Оплата наличными курьеру
 								.order-row
 								.order-row
-								.total
-									span итого: 
-									span.num  3831
+								
 
 				.mobile-modal
 					.call-icon
@@ -115,9 +123,10 @@ html(lang='ru')
 					.text-holder
 						p
 							|введите ваш номер телефона и наши менеджеры свяжутся с вами в ближайшее время
-						input(type="text", placeholder="+38 /ххх/ ххх хх хх")
-						.btns
-							button.button перезвоните мне
+						form.js-reg-field
+							input.js-valid-phone(name="field", placeholder="+38 /ххх/ ххх хх хх")
+							.btns
+								button.button перезвоните мне
 
 			section(style="margin-top: 100px")
 
@@ -207,7 +216,7 @@ html(lang='ru')
 						button.button оформить заказ
 					.back-basket
 						a(href="#").to-basket
-							span вернуться в корзину…
+							span Продолжить покупки
 
 
 
