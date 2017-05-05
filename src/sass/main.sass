@@ -224,6 +224,25 @@ body
 			@media #{$media-lg-max}
 				font-size: 0.8em
 
+.advertising
+	margin-top: 40px
+	.advertising-item
+		padding: 15px
+		@media #{$media-lg-max}
+			padding: 10px
+		@media #{$media-lg-max}
+			padding: 3px
+		@media #{$media-580-max}
+			width: 100% !important
+		.image-holder	
+			margin-bottom: 10px
+		h4
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+		.description
+			max-height: 42px
+			overflow: hidden
 .categories
 	padding-top: 51px
 	padding-bottom: 15px
@@ -318,13 +337,13 @@ body
 				z-index: 2
 				background: #454545
 				padding: 10px
-				width: 212px
+				width: 249px
 				li
 					white-space: nowrap
 					display: inline-block
 					overflow: hidden
 					text-overflow: ellipsis
-					width: 92px
+					width: 112px
 					text-align: left
 				@media #{$media-xg-max}
 					top: 29px
